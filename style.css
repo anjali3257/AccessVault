@@ -1,0 +1,510 @@
+/* ===== Background Styling ===== */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: "Poppins", sans-serif;
+    color : #fff;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    width:100vw;
+    overflow-x: hidden;
+  justify-content: center; /* centers horizontally */
+    align-items: center;
+    animation: fadeIn 1.2s ease;
+}
+/* ===== LAYOUT FOR THE LOGIN PAGE ===== */
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* ===== LAYOUT FOR THE DASHBOARD PAGE ===== */
+body.dashboard-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.login-container {
+    background: rgba(28, 40, 51, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 400px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.login-container:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 198, 255, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+input, select, button {
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    box-sizing: border-box;
+}
+.login-container input::placeholder {
+    color: #bbb;
+}
+.login-container button {
+    background-color: #00c6ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0072ff;
+}
+/* --- The Creative Hover Effect ✨ --- */
+.login-container:hover {
+    /* Lifts the box up and makes it slightly larger */
+    transform: translateY(-15px) scale(1.03);
+
+    /* Adds a blue glow, matching your button color */
+    box-shadow: 0 0 25px rgba(0, 198, 255, 0.5),
+                0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+#message {
+    color: #ff8080;
+    font-size: 0.9em;
+}
+/* Dashboard Styles */
+
+header h2 {
+    color: #00c6ff;
+}
+
+header button {
+    background-color: #ff5252;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #ff0000;
+}
+tr:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+/* User Page Styles */
+.user-container {
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.actions {
+    text-align: center;
+}
+
+.actions input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 10px;
+}
+
+.actions button {
+    background-color: #00c6ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #0072ff;
+}
+
+.log-section {
+    margin-top: 30px;
+}
+
+.log-section h3 {
+    color: #00c6ff;
+}
+/* ===== Popup Modal for Screen View ===== */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 600px;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+/* ===== Analytics Cards ===== */
+/* ===== Enhanced Analytics Section ===== */
+.analytics-section {
+    margin: 40px auto;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #1a1f2b, #22324c);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.analytics-section h3 {
+    color: #ffc400;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.314);
+}
+
+.card h4 {
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #00b3ff;
+}
+
+.card p {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Specific colors for each card */
+.total-users { border-top: 3px solid #00bfff; }
+.total-actions { border-top: 3px solid #ffb700; }
+.active-user { border-top: 3px solid #00ff9c; }
+.last-activity { border-top: 3px solid #ff6b81; }
+
+/* Table styling update */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+th {
+    background: rgba(255,255,255,0.2);
+}
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.view-btn {
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #0086cc;
+}
+/* ===== Dashboard Header ===== */
+.header-content h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+
+/* ===== Animations ===== */
+
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.section-title {
+    color: #F7CF20;
+    text-align: center;
+    margin: 30px 0 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.dashboard-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.6);
+    transition: 0.3s ease;
+}
+/* ===== Session Logs ===== */
+.session-logs, .security-alerts, .system-health {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease;
+}
+
+.session-logs h3, .security-alerts h3, .system-health h3 {
+    color: #00c6ff;
+    margin-bottom: 15px;
+}
+
+.session-logs ul, .security-alerts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.session-logs li, .security-alerts li {
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Alerts Styling ===== */
+.alert-warning {
+    background: rgba(255, 193, 7, 0.2);
+    border-left: 4px solid #ffc107;
+    color: #ffc107;
+}
+
+.alert-success {
+    background: rgba(40, 167, 69, 0.2);
+    border-left: 4px solid #28a745;
+    color: #28a745;
+}
+
+/* ===== System Health ===== */
+/* --- Enhanced Section Styles --- */
+.section-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+.section-box:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: scale(1.02);
+}
+
+/* --- Section Titles --- */
+.section-box h3 {
+    color: #00e0ff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- Session Logs --- */
+.session-logs p {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 6px;
+}
+
+/* --- Security Alerts --- */
+.security-alerts p {
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+
+.security-alerts.warning {
+    color: #ffb84d;
+}
+
+/* --- System Health --- */
+.system-health .health-box {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: rgba(0, 255, 0, 0.08);
+    color: #00ff88;
+    border: 2px solid #00ff88;
+    border-radius: 10px;
+    padding: 15px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.system-health .health-box:hover {
+    background: rgba(0, 255, 0, 0.15);
+    transform: scale(1.03);
+}
+
+.system-health .health-box.alert {
+    background: rgba(255, 0, 0, 0.08);
+    color: #ff4d4d;
+    border-color: #ff4d4d;
+}
+
+.system-health .health-box.alert:hover {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+/* Subtle entry animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Add padding to the rest of your dashboard to avoid overlap */
+.dashboard-content {
+    margin-top: 120px;
+}
+/* ===== HEADER STYLING ===== */
+.dashboard-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:15px;
+    background: linear-gradient(90deg, #00264d, #004080);
+    color: #00FFFF;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #00FFFF;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeInDown 0.8s ease;
+}
+.header-content {
+    flex-grow: 1; /* Allows the title container to take available space */
+    text-align: center; /* Centers the text inside */
+}
+
+.header-content h1 {
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header-content .subtitle {
+    font-size: 0.9rem;
+    color: #a8e4ff;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+/* Logout button */
+.logout-btn {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    width: fit-content;
+    border-radius: 7px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    
+}
+
+.logout-btn:hover {
+    background-color: #e60000;
+}
+
+
+/* Push the main content down so header doesn’t overlap */
+/* ===== DASHBOARD CONTAINER ===== */
+.dashboard-container {
+    flex:1;
+    max-width: 1200px;
+    margin: 160px auto 40px auto; /* Pushes content below fixed header */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+.section-title {
+    color: #F7CF20;
+    text-align: center;
+    margin: 30px 0 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

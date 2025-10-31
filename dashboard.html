@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | PIM/PAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1>ADMIN DASHBOARD</h1>
+            <p class="subtitle">Monitor user activity, sessions, and system access in real-time</p>
+        </div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <!-- ===== MAIN DASHBOARD CONTAINER ===== -->
+    <div class="dashboard-container">
+
+        <!-- ===== Dashboard Analytics ===== -->
+        <h2 class="section-title">System Overview</h2>
+        <section class="analytics-section">
+            <h3>Session Analytics</h3>
+            <div class="analytics-grid">
+                <div class="card total-users">
+                    <h4>Total Users</h4>
+                    <p id="totalUsers">0</p>
+                </div>
+                <div class="card total-actions">
+                    <h4>Total Actions</h4>
+                    <p id="totalActions">0</p>
+                </div>
+                <div class="card active-user">
+                    <h4>Most Active User</h4>
+                    <p id="activeUser">N/A</p>
+                </div>
+                <div class="card last-activity">
+                    <h4>Last Activity</h4>
+                    <p id="lastActivity">N/A</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Active User Sessions ===== -->
+        <h2 class="section-title">Active User Sessions</h2>
+        <section class="activity-section">
+            <h3>Active User Sessions</h3>
+            <table id="sessionTable">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>User</th>
+                        <th>Role</th>
+                        <th>Login Time</th>
+                        <th>Activity</th>
+                        <th>Screen Monitor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically added -->
+                </tbody>
+            </table>
+        </section>
+
+        <div class="section-box session-logs">
+            <h3>🕒 Recent Session Logs</h3>
+            <p>[2025-10-31 18:45:22] Admin viewed user session data.</p>
+            <p>[2025-10-31 18:46:10] User uploaded a config file.</p>
+            <p>[2025-10-31 18:48:03] Admin updated security settings.</p>
+        </div>
+
+        <div class="section-box">
+            <h3>⚠️ Security Alerts</h3>
+            <div class="security-alerts">
+                <p>Unauthorized login attempt detected from IP: 192.168.0.25</p>
+                <p>All privileged sessions are under control ✅</p>
+            </div>
+
+            <div class="system-health green">
+                <h3>💻 System Health</h3>
+                <p>🟢 All Systems Operational</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Screen Monitoring Popup ===== -->
+    <div id="screenPopup" 
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+                background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:1000;">
+        <div style="background:#fff; padding:20px; border-radius:10px; width:70%; height:70%;
+                display:flex; flex-direction:column; align-items:center; justify-content:center;">
+            <h3 style="margin-bottom:15px;">Live Screen Monitoring (Simulation)</h3>
+            <img id="screenImage" src="" alt="Screen Preview" 
+                style="width:80%; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.3);"/>
+            <button onclick="closePopup()" 
+                    style="margin-top:20px; padding:10px 20px; border:none; background:#007bff;
+                        color:#fff; border-radius:5px; cursor:pointer;">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
